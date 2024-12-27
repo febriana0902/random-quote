@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #111729;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .quote-container {
+            position: relative;
+            background-color: #20293A;
+            border-radius: 15px;
+            text-align: center;
+            width: 500px;
+            min-height: 200px;
+            overflow: hidden;
+        }
+
+        .quote-container img.bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: 1; 
+        }
+
+        .text{
+            z-index: 2;
+            position: relative;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            color: #ebe9e9;
+        }
+
+        .quote{
+            color: #97A3B6;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 20px;
+            text-align: center;
+           
+        }
+
+        .author{
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .tags {
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+            margin-top: 5px;
+        }
+
+        .tags span {
+            color: #6466E9;
+            border: solid 1px #6466E9;
+            border-radius: 30px;
+            padding: 3px 8px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .button{
+            display: flex;
+            justify-content: center;
+            gap: 0;
+        }
+
+        #new-quote img, #copy-quote img{
+           width: 30px;
+           height: 30px;  
+        }
+
+        #new-quote{
+            border-right: none;
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        #copy-quote{
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        @media screen and (max-width: 640px) {
+            .quote-container {
+                width: 450px;
+                min-height: 200px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quote-container">
+            <img class="bg" src="bg-image-random-quote.svg" alt="background-color">
+
+            <div class="text">
+                <div class="author"></div>
+                <div class="tags"></div>
+                <div class="quote"></div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button id="new-quote"><img src="Regroup.svg" alt="New Quote"></button> 
+            <button id="copy-quote"><img src="link.svg" alt="Copy Quote"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
