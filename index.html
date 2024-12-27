@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Random Quote</title>
 
     <style>
         *{
@@ -104,17 +104,31 @@
             gap: 0;
         }
 
-        #new-quote img, #copy-quote img{
-           width: 30px;
-           height: 30px;  
+        .new-quote img, .copy-quote img{
+           width: 24px;
+           height: 24px;  
+           background-color: #111729;
+           cursor: pointer;
         }
 
-        #new-quote{
+        .new-quote, .copy-quote {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111729; /* Warna dasar tombol */
+            border: solid 1px #20293A;
+            border-radius: 10px; /* Membuat sudut tombol melengkung */
+            padding: 10px 15px; /* Memberikan ruang di dalam tombol */
+            cursor: pointer; /* Menunjukkan bahwa tombol bisa diklik */
+            transition: background-color 0.3s; /* Animasi perubahan warna */
+        }
+
+        .new-quote{
             border-right: none;
             border-radius: 10px 0px 0px 10px;
         }
 
-        #copy-quote{
+        .copy-quote{
             border-radius: 0px 10px 10px 0px;
         }
 
@@ -141,8 +155,8 @@
         </div>
 
         <div class="button">
-            <button id="new-quote"><img src="Regroup.svg" alt="New Quote"></button> 
-            <button id="copy-quote"><img src="link.svg" alt="Copy Quote"></button>
+            <button id="new-quote"  class="new-quote"><img src="Regroup.svg" alt="New Quote"></button> 
+            <button id="copy-quote" class="copy-quote"><img src="link.svg" alt="Copy Quote"></button>
         </div>
     </div>
 
